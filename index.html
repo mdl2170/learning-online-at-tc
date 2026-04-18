@@ -1,0 +1,2860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learning Online @ TC — Digital Futures Institute · Teachers College, Columbia University</title>
+<meta name="description" content="A one-stop resource hub to help Teachers College students prepare for and thrive in their online learning — tools, tips, AI guidance, and where to get help.">
+<meta name="theme-color" content="#001F63">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+  :root {
+    /* --- DFI brand tokens (extracted from page-2018 stylesheet) --- */
+    --tc-navy: #001F63;
+    --tc-navy-dark: #000F30;
+    --tc-navy-deep: #00184E;
+    --tc-blue: #005FBE;
+    --tc-blue-pale: #D1E9FD;
+    --tc-blue-paler: #F3F9FE;
+    --tc-red: #B41E1B;
+    --tc-red-subtle: #FCEAE9;
+    --tc-gold: #C28508;
+    --tc-gold-pale: #FFF4DD;
+    --tc-green: #1B9776;
+    --tc-green-pale: #B1EEDE;
+    --tc-grey-text: #333333;
+    --tc-grey-muted: #767676;
+    --tc-grey-border: #E2E6EF;
+    --tc-grey-soft: #F5F5F5;
+    --tc-white: #FFFFFF;
+
+    /* Semantic tokens */
+    --color-bg: var(--tc-white);
+    --color-surface: var(--tc-white);
+    --color-surface-alt: var(--tc-blue-paler);
+    --color-border: var(--tc-grey-border);
+    --color-text: var(--tc-grey-text);
+    --color-muted: var(--tc-grey-muted);
+    --color-accent: var(--tc-navy);
+    --color-accent-hover: var(--tc-navy-dark);
+    --color-link: var(--tc-blue);
+
+    /* Spacing (8px base) */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+
+    /* Typography scale */
+    --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.85rem);
+    --text-sm: clamp(0.875rem, 0.82rem + 0.2vw, 0.95rem);
+    --text-base: 16px;
+    --text-md: clamp(1rem, 0.95rem + 0.2vw, 1.08rem);
+    --text-lg: clamp(1.125rem, 1rem + 0.4vw, 1.25rem);
+    --text-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.45rem);
+    --text-2xl: clamp(1.5rem, 1.25rem + 1vw, 1.75rem);
+    --text-3xl: clamp(1.75rem, 1.4rem + 1.4vw, 2.25rem);
+    --text-4xl: clamp(2rem, 1.55rem + 2vw, 3rem);
+    --text-5xl: clamp(2.5rem, 1.9rem + 3vw, 4.5rem); /* matches DFI 72px max */
+
+    /* Shadows (subtle, institutional) */
+    --shadow-xs: 0 1px 2px rgba(0, 31, 99, 0.05);
+    --shadow-sm: 0 1px 3px rgba(0, 31, 99, 0.08), 0 1px 2px rgba(0, 31, 99, 0.04);
+    --shadow-md: 0 4px 12px rgba(0, 31, 99, 0.08), 0 2px 4px rgba(0, 31, 99, 0.04);
+    --shadow-lg: 0 16px 32px rgba(0, 31, 99, 0.10), 0 4px 8px rgba(0, 31, 99, 0.05);
+
+    /* Sharper radii — DFI uses border-radius: 0 on buttons */
+    --radius-none: 0;
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    --radius-lg: 8px;
+
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 160px; }
+  body {
+    font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: var(--text-base);
+    line-height: 1.6;
+    color: var(--color-text);
+    background: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Libre Franklin', sans-serif;
+    color: var(--tc-navy);
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+    font-weight: 700;
+  }
+  /* Editorial serif accent for display elements (Constantia-alike) */
+  .serif, blockquote, .pullquote {
+    font-family: 'Lora', Constantia, Georgia, 'Times New Roman', serif;
+  }
+
+  h1 { font-size: var(--text-5xl); font-weight: 800; letter-spacing: -0.02em; }
+  h2 { font-size: var(--text-3xl); margin-bottom: var(--space-4); }
+  h3 { font-size: var(--text-xl); margin-bottom: var(--space-3); font-weight: 600; }
+  h4 { font-size: var(--text-lg); margin-bottom: var(--space-2); font-weight: 600; }
+
+  p { margin-bottom: var(--space-4); max-width: 68ch; }
+  p:last-child { margin-bottom: 0; }
+
+  a {
+    color: var(--color-link);
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 95, 190, 0.3);
+    text-underline-offset: 3px;
+    transition: color 0.15s var(--ease), text-decoration-color 0.15s var(--ease);
+  }
+  a:hover { color: var(--tc-navy); text-decoration-color: var(--tc-navy); }
+  a:focus-visible { outline: 2px solid var(--tc-blue); outline-offset: 3px; border-radius: var(--radius-sm); }
+
+  img, svg { max-width: 100%; display: block; }
+
+  .skip-link {
+    position: absolute;
+    top: -50px;
+    left: var(--space-4);
+    background: var(--tc-navy);
+    color: #fff;
+    padding: var(--space-2) var(--space-4);
+    z-index: 100;
+    font-weight: 600;
+    transition: top 0.2s var(--ease);
+    text-decoration: none;
+  }
+  .skip-link:focus { top: var(--space-3); color: #fff; }
+
+  /* Layout */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-5);
+  }
+  .container-wide {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--space-5);
+  }
+  @media (min-width: 768px) {
+    .container, .container-wide { padding: 0 var(--space-8); }
+  }
+
+  /* ====================================================
+     TOP BAR + MASTHEAD (DFI-style two-tier header)
+     ==================================================== */
+  .tc-topbar {
+    background: var(--tc-navy-deep);
+    color: #fff;
+    font-size: var(--text-xs);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .tc-topbar .container-wide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 36px;
+    gap: var(--space-4);
+  }
+  .tc-topbar a { color: #cfd8e8; text-decoration: none; font-weight: 500; }
+  .tc-topbar a:hover { color: #fff; text-decoration: underline; }
+  .tc-topbar-left { display: flex; align-items: center; gap: var(--space-4); }
+  .tc-topbar-right { display: flex; align-items: center; gap: var(--space-4); }
+  @media (max-width: 640px) { .tc-topbar-left span.sep { display: none; } }
+
+  .dfi-masthead {
+    background: var(--tc-navy);
+    background-image:
+      linear-gradient(135deg, rgba(0, 31, 99, 0.96) 0%, rgba(0, 24, 78, 0.98) 100%),
+      radial-gradient(circle at 20% 100%, rgba(0, 95, 190, 0.25), transparent 55%),
+      radial-gradient(circle at 85% 0%, rgba(102, 206, 246, 0.15), transparent 50%);
+    color: #fff;
+    padding: var(--space-8) 0;
+    border-bottom: 4px solid var(--tc-blue);
+    position: relative;
+  }
+  .dfi-masthead::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      90deg,
+      transparent 0 12px,
+      rgba(255,255,255,0.015) 12px 13px
+    );
+    pointer-events: none;
+  }
+  .dfi-masthead-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-6);
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .dfi-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+    color: #fff;
+    text-decoration: none;
+  }
+  .dfi-brand:hover { color: #fff; text-decoration: none; }
+  .dfi-logo-mark {
+    width: 64px;
+    height: 64px;
+    border: 2px solid #fff;
+    display: grid;
+    place-items: center;
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.9rem;
+    color: #fff;
+    letter-spacing: -0.02em;
+    flex: 0 0 auto;
+  }
+  .dfi-brand-text { display: flex; flex-direction: column; line-height: 1.2; }
+  .dfi-brand-text .eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #A9C3E8;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .dfi-brand-text .title {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: #fff;
+  }
+  .dfi-brand-text .subtitle {
+    font-size: var(--text-sm);
+    color: #CDD9EC;
+    font-weight: 400;
+    margin-top: 2px;
+  }
+
+  .dfi-tc-lockup {
+    text-align: right;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #A9C3E8;
+    line-height: 1.4;
+  }
+  .dfi-tc-lockup strong {
+    display: block;
+    color: #fff;
+    font-size: 0.85rem;
+    margin-top: 2px;
+    letter-spacing: 0.14em;
+  }
+  @media (max-width: 640px) {
+    .dfi-masthead-inner { grid-template-columns: 1fr; gap: var(--space-4); }
+    .dfi-tc-lockup { text-align: left; }
+  }
+
+  /* Primary navigation bar (dark, sticky) */
+  .dfi-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--tc-navy-dark);
+    color: #fff;
+    box-shadow: 0 2px 0 var(--tc-blue);
+  }
+  .dfi-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    min-height: 52px;
+  }
+  .dfi-nav-title {
+    color: #fff;
+    font-size: var(--text-sm);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .dfi-nav-title:hover { color: #A9C3E8; text-decoration: none; }
+  .section-nav { display: none; gap: var(--space-1); }
+  @media (min-width: 1024px) { .section-nav { display: flex; align-items: center; } }
+  .section-nav a {
+    color: #CDD9EC;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    padding: var(--space-3) var(--space-4);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s var(--ease), border-color 0.15s var(--ease);
+  }
+  .section-nav a:hover { color: #fff; text-decoration: none; border-bottom-color: rgba(255,255,255,0.3); }
+  .section-nav a.is-active { color: #fff; border-bottom-color: var(--tc-blue); background: rgba(255,255,255,0.05); }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px; height: 44px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s var(--ease);
+  }
+  .nav-toggle:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.5); }
+  @media (min-width: 1024px) { .nav-toggle { display: none; } }
+
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: var(--space-3) 0 var(--space-5);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    background: var(--tc-navy-dark);
+  }
+  .mobile-nav.is-open { display: flex; }
+  .mobile-nav a {
+    color: #CDD9EC;
+    font-weight: 500;
+    padding: var(--space-3) var(--space-2);
+    text-decoration: none;
+  }
+  .mobile-nav a:hover { background: rgba(255,255,255,0.06); color: #fff; text-decoration: none; }
+
+  /* Breadcrumb */
+  .breadcrumb-wrap {
+    background: var(--tc-blue-paler);
+    border-bottom: 1px solid var(--color-border);
+    font-size: var(--text-sm);
+  }
+  .breadcrumb-wrap .container-wide {
+    padding-top: var(--space-3);
+    padding-bottom: var(--space-3);
+  }
+  .breadcrumb-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+    margin: 0;
+    padding: 0;
+  }
+  .breadcrumb-list li { display: flex; align-items: center; gap: var(--space-2); color: var(--color-muted); }
+  .breadcrumb-list li::after { content: "›"; color: var(--color-muted); margin-left: var(--space-1); }
+  .breadcrumb-list li:last-child::after { content: ""; }
+  .breadcrumb-list li:last-child { color: var(--tc-navy); font-weight: 600; }
+  .breadcrumb-list a { color: var(--tc-blue); text-decoration: none; }
+  .breadcrumb-list a:hover { text-decoration: underline; color: var(--tc-navy); }
+
+  /* ====================================================
+     BUTTONS (DFI: sharp corners, 33px, 14px font)
+     ==================================================== */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-6);
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    border: 2px solid transparent;
+    border-radius: var(--radius-none);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.15s var(--ease);
+    min-height: 44px;
+  }
+  .btn:focus-visible { outline: 2px solid var(--tc-blue); outline-offset: 3px; }
+  .btn-primary {
+    background: var(--tc-navy);
+    color: #fff;
+    border-color: var(--tc-navy);
+  }
+  .btn-primary:hover {
+    background: var(--tc-navy-dark);
+    border-color: var(--tc-navy-dark);
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--tc-navy);
+    border-color: var(--tc-navy);
+  }
+  .btn-secondary:hover {
+    background: var(--tc-navy);
+    color: #fff;
+    text-decoration: none;
+  }
+  .btn-on-dark {
+    background: var(--tc-white);
+    color: var(--tc-navy);
+    border-color: var(--tc-white);
+  }
+  .btn-on-dark:hover {
+    background: var(--tc-blue-pale);
+    color: var(--tc-navy-dark);
+    text-decoration: none;
+  }
+  .btn-ghost-on-dark {
+    background: transparent;
+    color: #fff;
+    border-color: rgba(255,255,255,0.4);
+  }
+  .btn-ghost-on-dark:hover {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    border-color: #fff;
+    text-decoration: none;
+  }
+
+  /* ====================================================
+     HERO
+     ==================================================== */
+  .hero {
+    position: relative;
+    padding: var(--space-16) 0 var(--space-16);
+    background: var(--tc-blue-paler);
+    isolation: isolate;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("assets/world-map-dots.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.05;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero > * { position: relative; z-index: 1; }
+  .hero-grid {
+    display: grid;
+    gap: var(--space-10);
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .hero-grid { grid-template-columns: 1.15fr 1fr; gap: var(--space-16); }
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    color: var(--tc-navy);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: var(--space-2) var(--space-4);
+    background: var(--tc-blue-pale);
+    margin-bottom: var(--space-5);
+  }
+  .hero h1 { margin-bottom: var(--space-5); }
+  .hero h1 .highlight { color: var(--tc-blue); }
+  .hero-lede {
+    font-size: var(--text-lg);
+    color: var(--color-muted);
+    max-width: 52ch;
+    margin-bottom: var(--space-8);
+  }
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .hero-visual {
+    position: relative;
+  }
+  .hero-photo {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    box-shadow:
+      0 30px 60px -20px rgba(0, 31, 99, 0.35),
+      0 10px 30px -10px rgba(0, 15, 48, 0.2);
+    /* Sharp corners to match the DFI brand */
+    border-radius: 0;
+    /* Decorative navy corner accent */
+    background: var(--tc-navy);
+  }
+  .hero-photo::before {
+    content: "";
+    position: absolute;
+    top: -14px; left: -14px;
+    width: 96px; height: 96px;
+    border-top: 4px solid var(--tc-navy);
+    border-left: 4px solid var(--tc-navy);
+    z-index: 2;
+    pointer-events: none;
+  }
+  .hero-photo::after {
+    content: "";
+    position: absolute;
+    bottom: -14px; right: -14px;
+    width: 96px; height: 96px;
+    border-bottom: 4px solid var(--tc-red);
+    border-right: 4px solid var(--tc-red);
+    z-index: 2;
+    pointer-events: none;
+  }
+  .hero-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+  }
+  .hero-photo-caption {
+    position: absolute;
+    left: var(--space-5);
+    bottom: var(--space-5);
+    right: var(--space-5);
+    max-width: 80%;
+    padding: var(--space-3) var(--space-4);
+    background: rgba(0, 15, 48, 0.82);
+    color: var(--tc-white);
+    font-family: 'Lora', 'Constantia', Georgia, serif;
+    font-style: italic;
+    font-size: var(--text-sm);
+    line-height: 1.5;
+    letter-spacing: 0.005em;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-left: 3px solid var(--tc-blue);
+  }
+  .hero-photo-caption .fa-quote-left {
+    color: var(--tc-blue-pale);
+    margin-right: var(--space-2);
+    opacity: 0.85;
+  }
+  @media (max-width: 640px) {
+    .hero-photo-caption {
+      position: static;
+      max-width: 100%;
+      margin-top: var(--space-3);
+      background: var(--tc-navy);
+    }
+    .hero-photo::after { display: none; }
+  }
+
+  /* ====================================================
+     SECTIONS
+     ==================================================== */
+  section { padding: var(--space-16) 0; }
+  .section-alt {
+    background: var(--tc-blue-paler);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .section-header { margin-bottom: var(--space-10); max-width: 72ch; }
+  .section-eyebrow {
+    display: block;
+    font-size: var(--text-xs);
+    font-weight: 700;
+    color: var(--tc-blue);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-3);
+    padding-bottom: var(--space-2);
+    border-bottom: 2px solid var(--tc-blue-pale);
+    width: fit-content;
+  }
+  .section-lede { font-size: var(--text-lg); color: var(--color-muted); }
+
+  /* Cards (DFI: feature cards with data-style pattern) */
+  .card-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .card {
+    background: var(--tc-white);
+    border: 1px solid var(--color-border);
+    border-top: 3px solid var(--tc-navy);
+    padding: var(--space-6);
+    transition: box-shadow 0.2s var(--ease), transform 0.2s var(--ease);
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .card.card-blue { border-top-color: var(--tc-blue); }
+  .card.card-green { border-top-color: var(--tc-green); }
+  .card.card-gold { border-top-color: var(--tc-gold); }
+  .card .icon-circle {
+    width: 48px; height: 48px;
+    background: var(--tc-blue-pale);
+    color: var(--tc-navy);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: var(--space-4);
+  }
+  .card.card-green .icon-circle { background: var(--tc-green-pale); color: var(--tc-green); }
+  .card.card-gold .icon-circle { background: var(--tc-gold-pale); color: var(--tc-gold); }
+  .card ul { list-style: none; padding: 0; margin: var(--space-3) 0 0; }
+  .card ul li {
+    position: relative;
+    padding-left: var(--space-5);
+    margin-bottom: var(--space-2);
+    color: var(--color-text);
+    font-size: var(--text-sm);
+    line-height: 1.55;
+  }
+  .card ul li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0.7em;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--tc-navy);
+    transform: translateY(-50%);
+  }
+  .card.card-green ul li::before { background: var(--tc-green); }
+  .card.card-gold ul li::before { background: var(--tc-gold); }
+
+  /* Compact tool-tile grid (used inside Step 2) */
+  .tool-subsection {
+    margin-top: var(--space-12);
+    padding-top: var(--space-10);
+    border-top: 1px solid var(--color-border);
+  }
+  .tool-subsection-header {
+    margin-bottom: var(--space-6);
+  }
+  .tool-subsection-header h3 {
+    margin: 0 0 var(--space-2);
+    font-size: clamp(1.35rem, 1.1rem + 0.8vw, 1.75rem);
+    color: var(--tc-navy);
+    letter-spacing: -0.01em;
+  }
+  .tool-subsection-header p {
+    margin: 0;
+    color: var(--color-muted);
+    max-width: 68ch;
+  }
+  .tool-grid {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 900px) {
+    .tool-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .tool-grid { grid-template-columns: 1fr; }
+  }
+  .tool-tile {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    column-gap: var(--space-4);
+    row-gap: var(--space-2);
+    align-items: start;
+    padding: var(--space-5);
+    background: var(--tc-white);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--tc-blue);
+    color: inherit;
+    text-decoration: none;
+    transition: box-shadow 0.2s var(--ease), transform 0.2s var(--ease), border-color 0.2s var(--ease);
+  }
+  .tool-tile:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px -14px rgba(0, 31, 99, 0.35);
+    border-left-color: var(--tc-navy);
+  }
+  .tool-tile-logo {
+    grid-row: 1 / span 2;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--tc-blue-paler);
+    border: 1px solid var(--color-border);
+    padding: 6px;
+  }
+  .tool-tile-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .tool-tile-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    font-weight: 700;
+    font-size: var(--text-md);
+    color: var(--tc-navy);
+    letter-spacing: -0.005em;
+  }
+  .tool-tile-name i { color: var(--tc-blue); font-size: 0.85em; }
+  .tool-tile:hover .tool-tile-name i { color: var(--tc-navy); }
+  .tool-tile p {
+    margin: 0;
+    font-size: var(--text-sm);
+    line-height: 1.55;
+    color: var(--color-text);
+    max-width: none;
+  }
+
+  /* Pullquote / callout */
+  .pullquote {
+    border-left: 4px solid var(--tc-blue);
+    background: var(--tc-blue-paler);
+    padding: var(--space-5) var(--space-6);
+    font-family: 'Lora', Georgia, serif;
+    font-style: italic;
+    font-size: var(--text-xl);
+    color: var(--tc-navy);
+    margin: var(--space-6) 0;
+    line-height: 1.45;
+  }
+  .callout {
+    background: var(--tc-gold-pale);
+    border-left: 4px solid var(--tc-gold);
+    padding: var(--space-5) var(--space-6);
+    margin: var(--space-6) 0;
+  }
+  .callout h4 { color: #5e4008; margin-bottom: var(--space-2); }
+  /* Callouts should fill their box — override the global p max-width cap */
+  .callout p { max-width: none; }
+
+  /* Welcome two-column — video left, text right */
+  .welcome-split {
+    display: grid;
+    gap: var(--space-8);
+    align-items: start;
+    margin-top: var(--space-8);
+  }
+  @media (min-width: 900px) {
+    .welcome-split {
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: var(--space-10);
+      align-items: center;
+    }
+  }
+
+  /* Video embed — editorial 16:9 frame with navy corner accent */
+  .video-embed {
+    margin: 0;
+    max-width: 100%;
+  }
+  .video-embed-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: var(--tc-navy);
+    overflow: hidden;
+    box-shadow:
+      0 30px 60px -20px rgba(0, 31, 99, 0.35),
+      0 10px 30px -10px rgba(0, 15, 48, 0.2);
+  }
+  .video-embed-frame::before {
+    content: "";
+    position: absolute;
+    top: -12px; left: -12px;
+    width: 72px; height: 72px;
+    border-top: 3px solid var(--tc-navy);
+    border-left: 3px solid var(--tc-navy);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .video-embed-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  .video-embed-caption {
+    margin-top: var(--space-4);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+    line-height: 1.5;
+  }
+  .video-embed-caption .cap-icon {
+    flex: 0 0 auto;
+    width: 32px; height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--tc-blue-paler);
+    color: var(--tc-navy);
+    font-size: 0.95rem;
+  }
+  .video-embed-caption strong {
+    color: var(--tc-navy);
+    font-weight: 700;
+  }
+  .video-embed-caption a {
+    color: var(--tc-navy);
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 31, 99, 0.35);
+    text-underline-offset: 3px;
+  }
+  .video-embed-caption a:hover,
+  .video-embed-caption a:focus-visible {
+    text-decoration-color: var(--tc-navy);
+  }
+
+  /* Welcome-side text column */
+  .welcome-text h3 {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: clamp(1.3rem, 1.1rem + 0.5vw, 1.6rem);
+    color: var(--tc-navy);
+    margin-bottom: var(--space-3);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+  .welcome-text p {
+    color: var(--color-body);
+    line-height: 1.65;
+    margin-bottom: var(--space-3);
+  }
+
+  /* Accordion */
+  details {
+    background: var(--tc-white);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--tc-navy);
+    margin-bottom: var(--space-3);
+    transition: box-shadow 0.2s var(--ease);
+  }
+  details[open] { box-shadow: var(--shadow-sm); }
+  summary {
+    cursor: pointer;
+    padding: var(--space-4) var(--space-5);
+    font-weight: 600;
+    color: var(--tc-navy);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-4);
+    list-style: none;
+    transition: background 0.2s var(--ease);
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary:hover { background: var(--tc-blue-paler); }
+  summary::after {
+    content: "\f078";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--tc-blue);
+    font-size: 0.85rem;
+    transition: transform 0.2s var(--ease);
+  }
+  details[open] summary::after { transform: rotate(-180deg); }
+  details .details-body { padding: 0 var(--space-5) var(--space-5); font-size: var(--text-sm); }
+  details .details-body ul { padding-left: var(--space-5); }
+
+  /* Checklist */
+  .checklist { list-style: none; padding: 0; }
+  .checklist li {
+    position: relative;
+    padding: var(--space-3) 0 var(--space-3) var(--space-10);
+    border-bottom: 1px solid var(--color-border);
+    font-size: var(--text-md);
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0; top: var(--space-3);
+    width: 26px; height: 26px;
+    background: var(--tc-navy);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+  }
+
+  /* Tabs — DFI-styled, accessible */
+  .tabs {
+    margin-top: var(--space-8);
+  }
+  .tab-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    border-bottom: 2px solid var(--tc-navy);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .tab-list [role="tab"] {
+    appearance: none;
+    background: transparent;
+    border: 1px solid transparent;
+    border-bottom: none;
+    border-radius: 0;
+    padding: var(--space-3) var(--space-5);
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 600;
+    font-size: var(--text-sm);
+    letter-spacing: 0.02em;
+    color: var(--tc-navy);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    position: relative;
+    bottom: -2px;
+    transition: background 0.2s var(--ease), color 0.2s var(--ease);
+  }
+  .tab-list [role="tab"] i {
+    font-size: 0.9em;
+    opacity: 0.75;
+  }
+  .tab-list [role="tab"]:hover {
+    background: var(--tc-blue-paler);
+    color: var(--tc-navy-dark);
+  }
+  .tab-list [role="tab"]:focus-visible {
+    outline: 3px solid var(--tc-blue);
+    outline-offset: 2px;
+    z-index: 1;
+  }
+  .tab-list [role="tab"][aria-selected="true"] {
+    background: var(--tc-navy);
+    color: var(--tc-white);
+    border-color: var(--tc-navy);
+  }
+  .tab-list [role="tab"][aria-selected="true"] i {
+    opacity: 1;
+  }
+
+  /* Gold (callout-style) variant — used for "Know the rules" tabs */
+  .tabs-gold .tab-list { border-bottom-color: var(--tc-gold); }
+  .tabs-gold .tab-list [role="tab"] { color: #5e4008; }
+  .tabs-gold .tab-list [role="tab"]:hover { background: var(--tc-gold-pale); color: #5e4008; }
+  .tabs-gold .tab-list [role="tab"]:focus-visible { outline-color: var(--tc-gold); }
+  .tabs-gold .tab-list [role="tab"][aria-selected="true"] {
+    background: var(--tc-gold);
+    color: var(--tc-white);
+    border-color: var(--tc-gold);
+  }
+  .tabs-gold .tab-panels { background: var(--tc-gold-pale); }
+  .tabs-gold .tab-panel-header h3 { color: #5e4008; }
+  .tab-panels {
+    background: var(--tc-white);
+    border: 1px solid var(--color-border);
+    border-top: none;
+    padding: var(--space-8) var(--space-6);
+  }
+  [role="tabpanel"] {
+    outline: none;
+    /* Reset the global section { padding: var(--space-16) 0 } rule for tab-panels */
+    padding: 0;
+  }
+  [role="tabpanel"][hidden] { display: none; }
+  [role="tabpanel"] > *:first-child { margin-top: 0; }
+  [role="tabpanel"] > *:last-child { margin-bottom: 0; }
+  .tab-panel-header {
+    display: block;
+    margin-bottom: var(--space-4);
+  }
+  .tab-panel-header h3 {
+    margin: 0;
+    font-size: clamp(1.25rem, 1.05rem + 0.6vw, 1.6rem);
+    color: var(--tc-navy);
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+  }
+
+  /* Tab-panel content — unified body-text size for consistency across tabs */
+  .tab-panel,
+  .tab-panel > p,
+  .tab-panel .tab-split-body > p,
+  .tab-panel > ul > li,
+  .tab-panel .tab-split-body > ul > li,
+  .tab-panel .callout p,
+  .tab-panel details summary,
+  .tab-panel details .details-body,
+  .tab-panel details .details-body p {
+    font-size: var(--text-sm);
+    line-height: 1.55;
+  }
+  /* Paragraphs inside tab-panel (including callout + accordion) run edge-to-edge */
+  .tab-panel p { max-width: none; }
+  /* Custom bullets, paragraph spacing (overrides global reset) */
+  .tab-panel > p,
+  .tab-panel .tab-split-body > p { margin: 0 0 var(--space-4); line-height: 1.65; }
+  .tab-panel > p:last-child,
+  .tab-panel .tab-split-body > p:last-child { margin-bottom: 0; }
+  .tab-panel > ul:not(.checklist),
+  .tab-panel .tab-split-body > ul:not(.checklist) {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-4);
+  }
+  .tab-panel > ul:not(.checklist) > li,
+  .tab-panel .tab-split-body > ul:not(.checklist) > li {
+    position: relative;
+    padding-left: var(--space-5);
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+    font-size: var(--text-sm);
+    line-height: 1.55;
+  }
+  .tab-panel > ul:not(.checklist) > li::before,
+  .tab-panel .tab-split-body > ul:not(.checklist) > li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0.75em;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--tc-navy);
+    transform: translateY(-50%);
+  }
+  /* Category-accent bullets per tab */
+  .tab-panel[data-tab="access"] > ul:not(.checklist) > li::before,
+  .tab-panel[data-tab="access"] .tab-split-body > ul:not(.checklist) > li::before { background: var(--tc-gold); }
+  /* Keep details inside a panel boxed within padding */
+  .tab-panel details { margin-bottom: var(--space-3); border-left: 1px solid var(--color-border); }
+  .tab-panel details:last-child { margin-bottom: 0; }
+  /* Callout inside a panel — keep flush with panel padding, not full-bleed */
+  .tab-panel .callout { margin-left: 0; margin-right: 0; }
+  /* Utility spacing used inside panels */
+  .tab-panel .mt-6 { margin-top: var(--space-6); }
+  /* Two-column split layout: image left, content right */
+  .tab-split {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: var(--space-8);
+    align-items: start;
+  }
+  .tab-split-media {
+    position: relative;
+    overflow: hidden;
+    background: var(--tc-blue-paler, #EEF2F8);
+    aspect-ratio: 3 / 2;
+  }
+  .tab-split-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .tab-split-body > *:first-child { margin-top: 0; }
+  .tab-split-body > *:last-child { margin-bottom: 0; }
+  @media (max-width: 820px) {
+    .tab-split {
+      grid-template-columns: 1fr;
+      gap: var(--space-5);
+    }
+  }
+  @media (max-width: 720px) {
+    .tab-list {
+      border-bottom: none;
+      gap: var(--space-2);
+    }
+    .tab-list [role="tab"] {
+      border: 1px solid var(--color-border);
+      border-radius: 0;
+      bottom: 0;
+      flex: 1 1 calc(50% - var(--space-2));
+      justify-content: center;
+      text-align: center;
+      font-size: var(--text-xs);
+      padding: var(--space-3) var(--space-3);
+    }
+    .tab-panels {
+      border-top: 1px solid var(--color-border);
+      padding: var(--space-6);
+    }
+  }
+
+  /* ====================================================
+     AI SECTION (dark navy — DFI primary treatment)
+     ==================================================== */
+  .ai-section {
+    background: linear-gradient(180deg, var(--tc-navy) 0%, var(--tc-navy-deep) 100%);
+    color: #E6EDF9;
+    position: relative;
+    border-top: 4px solid var(--tc-blue);
+    border-bottom: 4px solid var(--tc-blue);
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .ai-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(102, 206, 246, 0.12), transparent 45%),
+      radial-gradient(circle at 85% 75%, rgba(0, 95, 190, 0.25), transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .ai-waves {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.18;
+  }
+  .ai-waves svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ai-waves { display: none; }
+  }
+  .ai-section .container { position: relative; z-index: 1; }
+  .ai-section h2, .ai-section h3, .ai-section h4 { color: #fff; }
+  .ai-section .section-eyebrow { color: #66CEF6; border-bottom-color: rgba(102, 206, 246, 0.3); }
+  .ai-section .section-lede { color: #CDD9EC; }
+  .ai-section p { color: #D8E1F2; }
+  .ai-section a { color: #9AD4F9; text-decoration-color: rgba(154, 212, 249, 0.4); }
+  .ai-section a:hover { color: #fff; text-decoration-color: #fff; }
+
+  .ai-section .pullquote {
+    background: rgba(255, 255, 255, 0.04);
+    border-left-color: #66CEF6;
+    color: #fff;
+  }
+  .ai-section .callout {
+    border-left: 0;
+  }
+  .ai-section .callout,
+  .ai-section .callout p,
+  .ai-section .callout strong {
+    color: var(--tc-navy);
+  }
+  .ai-section .callout p {
+    font-family: 'Lora', Georgia, serif;
+    font-style: italic;
+    font-size: var(--text-xl);
+    line-height: 1.45;
+    margin-bottom: 0;
+  }
+
+  .tools-row {
+    display: grid;
+    gap: var(--space-5);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin-bottom: var(--space-10);
+  }
+  .tool-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: var(--space-6);
+    transition: all 0.2s var(--ease);
+  }
+  .tool-card:hover { background: rgba(255, 255, 255, 0.08); transform: translateY(-2px); }
+  .tool-card h4 { display: flex; align-items: center; gap: var(--space-3); color: #fff; }
+  .tool-card h4 i { color: #66CEF6; font-size: 1.4rem; }
+  .tool-card p { font-size: var(--text-sm); color: #C1CCE0; }
+  .tool-card-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    padding: 6px;
+    flex: 0 0 auto;
+  }
+  .tool-card-logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .tool-card p:nth-of-type(1) { flex: 1 1 auto; }
+  .tool-card-cta {
+    margin: var(--space-5) 0 0 !important;
+    text-align: right;
+  }
+  .ai-section .tool-card .btn-primary {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  .ai-section .tool-card .btn-primary:hover {
+    background: #66CEF6;
+    color: var(--tc-navy-deep);
+    border-color: #66CEF6;
+  }
+
+  .ai-practices {
+    display: grid;
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .ai-practice {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: flex-start;
+    padding: var(--space-5);
+    background: rgba(255, 255, 255, 0.04);
+    border-top: 3px solid #66CEF6;
+    height: 100%;
+  }
+  .ai-practice-num {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #66CEF6;
+    line-height: 1;
+  }
+  .ai-practice h4 { margin-bottom: var(--space-1); }
+  .ai-practice p { margin-bottom: 0; font-size: var(--text-sm); }
+  @media (max-width: 1024px) {
+    .ai-practices { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+  @media (max-width: 680px) {
+    .ai-practices { grid-template-columns: 1fr; }
+  }
+
+  .ai-guidelines-cta {
+    margin-top: var(--space-6);
+    padding: var(--space-6);
+    background: rgba(102, 206, 246, 0.08);
+    border: 1px solid rgba(102, 206, 246, 0.25);
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+  .ai-guidelines-cta p {
+    margin-bottom: 0;
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .ai-guidelines-cta .btn { white-space: nowrap; }
+  .ai-section .ai-guidelines-cta .btn-primary {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--dfi-navy, #001F63);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+  }
+  .ai-section .ai-guidelines-cta .btn-primary:hover {
+    background: #66CEF6;
+    color: var(--dfi-navy, #001F63);
+    border-color: #66CEF6;
+  }
+  @media (max-width: 680px) {
+    .ai-guidelines-cta { grid-template-columns: 1fr; }
+  }
+
+  .literacy-grid {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-top: var(--space-6);
+  }
+  .literacy-card {
+    padding: var(--space-5);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .literacy-card i { font-size: 1.5rem; color: #66CEF6; margin-bottom: var(--space-3); display: block; }
+  .literacy-card strong { display: block; color: #fff; margin-bottom: var(--space-1); font-size: var(--text-base); }
+  .literacy-card span { font-size: var(--text-sm); color: #B8C4DC; }
+  .literacy-sources {
+    margin-top: var(--space-4);
+    font-size: var(--text-xs);
+    color: #8FA0BD;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .literacy-sources a { color: #66CEF6; text-transform: none; letter-spacing: normal; }
+
+  .video-playlist {
+    margin-top: var(--space-8);
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    align-items: stretch;
+  }
+  .video-playlist-main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  .video-player {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .video-player iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .video-caption { padding: 0 var(--space-1); }
+  .video-caption h4 {
+    color: #fff;
+    margin-bottom: var(--space-2);
+    font-size: var(--text-lg);
+    line-height: 1.3;
+  }
+  .video-caption p {
+    color: #B8C4DC;
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-2);
+  }
+  .video-caption .video-meta {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+    font-size: var(--text-xs);
+    color: #8FA0BD;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .video-caption .video-meta a {
+    color: #66CEF6;
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  .video-playlist-list {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    max-height: 520px;
+  }
+  .video-playlist-list-header {
+    padding: var(--space-4) var(--space-5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--space-3);
+  }
+  .video-playlist-list-header strong {
+    color: #fff;
+    font-size: var(--text-base);
+  }
+  .video-playlist-list-header span {
+    color: #8FA0BD;
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .video-playlist-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    flex: 1;
+  }
+  .video-playlist-items li { margin: 0; }
+  .video-playlist-items button {
+    width: 100%;
+    text-align: left;
+    padding: var(--space-3) var(--space-5);
+    background: transparent;
+    border: 0;
+    border-left: 3px solid transparent;
+    color: inherit;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-3);
+    align-items: start;
+    font: inherit;
+    transition: background 0.15s var(--ease), border-color 0.15s var(--ease);
+  }
+  .video-playlist-items button:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+  .video-playlist-items button[aria-current="true"] {
+    background: rgba(102, 206, 246, 0.12);
+    border-left-color: #66CEF6;
+  }
+  .video-playlist-index {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 0.95rem;
+    color: #66CEF6;
+    line-height: 1.4;
+    min-width: 1.5rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .video-playlist-body { min-width: 0; }
+  .video-playlist-title {
+    display: block;
+    color: #fff;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  .video-playlist-duration {
+    display: block;
+    color: #8FA0BD;
+    font-size: var(--text-xs);
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  @media (max-width: 900px) {
+    .video-playlist { grid-template-columns: 1fr; }
+    .video-playlist-list { max-height: 380px; }
+  }
+
+  .ai-resources-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-2);
+  }
+  .ai-resources-list li {
+    padding: var(--space-3) var(--space-4);
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid #66CEF6;
+    transition: background 0.15s var(--ease);
+  }
+  .ai-resources-list li:hover { background: rgba(255, 255, 255, 0.07); }
+  .ai-resources-list li a { font-weight: 600; }
+  .ai-resources-list li span { display: block; color: #A7B4CC; font-size: var(--text-sm); margin-top: 2px; }
+
+  .disclaimer-grid {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: var(--space-10);
+    padding-top: var(--space-8);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .disclaimer-grid h4 {
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #66CEF6;
+    margin-bottom: var(--space-3);
+  }
+  .disclaimer-grid p { font-size: var(--text-sm); color: #B8C4DC; }
+
+  /* ====================================================
+     HELP SECTION
+     ==================================================== */
+  .contact-grid {
+    display: grid;
+    gap: var(--space-5);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin-bottom: var(--space-10);
+  }
+  .contact-card {
+    background: var(--tc-white);
+    border: 1px solid var(--color-border);
+    border-top: 4px solid var(--tc-navy);
+    padding: var(--space-6);
+    transition: all 0.2s var(--ease);
+  }
+  .contact-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+  .contact-card.variant-blue { border-top-color: var(--tc-blue); }
+  .contact-card.variant-green { border-top-color: var(--tc-green); }
+  .contact-card.variant-gold { border-top-color: var(--tc-gold); }
+  .contact-card .contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px; height: 48px;
+    background: var(--tc-blue-pale);
+    color: var(--tc-navy);
+    font-size: 1.3rem;
+    margin-bottom: var(--space-4);
+  }
+  .contact-card.variant-blue .contact-icon { background: var(--tc-blue-pale); color: var(--tc-blue); }
+  .contact-card.variant-green .contact-icon { background: var(--tc-green-pale); color: var(--tc-green); }
+  .contact-card.variant-gold .contact-icon { background: var(--tc-gold-pale); color: var(--tc-gold); }
+  .contact-card h3 { margin-bottom: var(--space-4); color: var(--tc-navy); }
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  .contact-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: var(--text-sm);
+  }
+  .contact-list li i {
+    color: var(--color-muted);
+    width: 18px;
+    text-align: center;
+  }
+  .contact-list li a { word-break: break-word; color: var(--tc-blue); }
+
+  /* Table */
+  .table-wrap {
+    background: var(--tc-white);
+    border: 1px solid var(--color-border);
+    overflow-x: auto;
+    box-shadow: var(--shadow-xs);
+  }
+  table { width: 100%; border-collapse: collapse; min-width: 640px; }
+  th, td {
+    text-align: left;
+    padding: var(--space-4) var(--space-5);
+    border-bottom: 1px solid var(--color-border);
+    font-size: var(--text-sm);
+    vertical-align: top;
+  }
+  thead tr { background: var(--tc-navy); }
+  th {
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: var(--text-xs);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: var(--tc-blue-paler); }
+
+  /* Collapsible details — styled to match contact cards */
+  .details-collapsible {
+    margin-top: var(--space-8);
+    background: var(--tc-white);
+    border: 1px solid var(--color-border);
+    transition: all 0.2s var(--ease);
+  }
+  .details-collapsible:hover {
+    box-shadow: var(--shadow-md);
+  }
+  .details-collapsible > summary {
+    padding: var(--space-6);
+    font-family: inherit;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+  .details-collapsible > summary .summary-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px; height: 48px;
+    background: var(--tc-blue-pale);
+    color: var(--tc-navy);
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+  .details-collapsible > summary .summary-title {
+    flex: 1;
+    font-family: inherit;
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--tc-navy);
+    line-height: 1.3;
+  }
+  .details-collapsible[open] > .table-wrap {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+  }
+
+  /* Closing */
+  .closing {
+    text-align: center;
+    padding: 0;
+  }
+  .closing h2 { color: var(--tc-navy); margin-bottom: var(--space-5); }
+  .closing p {
+    margin: 0 auto;
+    font-size: var(--text-3xl);
+    font-family: 'Lora', Georgia, serif;
+    font-style: italic;
+    color: var(--tc-navy);
+    max-width: 60ch;
+    line-height: 1.35;
+  }
+
+  /* ====================================================
+     FOOTER (DFI-style: dark navy, sitemap-style columns)
+     ==================================================== */
+  footer {
+    background: var(--tc-navy);
+    color: #CDD9EC;
+    padding: var(--space-12) 0 var(--space-5);
+    border-top: 4px solid var(--tc-blue);
+  }
+  .footer-main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: var(--space-8);
+  }
+  @media (max-width: 900px) { .footer-main { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .footer-main { grid-template-columns: 1fr; } }
+  footer h4 {
+    color: #fff;
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  footer p { font-size: var(--text-sm); color: #B8C4DC; max-width: 42ch; }
+  footer ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+  footer ul a { color: #CDD9EC; font-size: var(--text-sm); text-decoration: none; }
+  footer ul a:hover { color: #fff; text-decoration: underline; }
+
+  .footer-dfi-contact { font-size: var(--text-sm); color: #B8C4DC; line-height: 1.7; }
+  .footer-dfi-contact a { color: #9AD4F9; text-decoration: none; }
+  .footer-dfi-contact a:hover { color: #fff; text-decoration: underline; }
+
+  .footer-social { display: flex; gap: var(--space-2); margin-top: var(--space-4); }
+  .footer-social a {
+    width: 36px; height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.15s var(--ease);
+  }
+  .footer-social a:hover { background: var(--tc-blue); color: #fff; }
+
+  .footer-bottom {
+    margin-top: var(--space-10);
+    padding-top: var(--space-5);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    font-size: var(--text-xs);
+    color: #8A99B7;
+    letter-spacing: 0.04em;
+  }
+
+  /* Reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+  }
+  .reveal.is-visible { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; }
+  }
+
+  /* Helpers */
+  .grid-two {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .text-muted { color: var(--color-muted); }
+  .mt-8 { margin-top: var(--space-8); }
+  .mt-6 { margin-top: var(--space-6); }
+  .mb-4 { margin-bottom: var(--space-4); }
+
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- Breadcrumb (above nav) -->
+<nav class="breadcrumb-wrap" aria-label="Breadcrumb">
+  <div class="container-wide">
+    <ol class="breadcrumb-list">
+      <li><a href="https://www.tc.columbia.edu/">TC</a></li>
+      <li><a href="https://www.tc.columbia.edu/digitalfuturesinstitute/">Digital Futures Institute</a></li>
+      <li><a href="https://www.tc.columbia.edu/digitalfuturesinstitute/learning--technology/">Learning &amp; Technology</a></li>
+      <li>Learning Online @ TC</li>
+    </ol>
+  </div>
+</nav>
+
+<!-- Primary nav (sticky) -->
+<div class="dfi-nav">
+  <div class="container-wide dfi-nav-inner">
+    <a class="dfi-nav-title" href="#top">Learning Online @ TC</a>
+    <nav class="section-nav" aria-label="Section navigation">
+      <a href="#welcome">Welcome</a>
+      <a href="#get-set-up">Get set up</a>
+      <a href="#navigating">Courses</a>
+      <a href="#succeeding">Succeed</a>
+      <a href="#ai">AI at TC</a>
+      <a href="#help">Need help?</a>
+    </nav>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+  </div>
+  <div class="container-wide">
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="#welcome">Welcome</a>
+      <a href="#get-set-up">Before you start</a>
+      <a href="#navigating">Navigating your courses</a>
+      <a href="#succeeding">Succeeding online</a>
+      <a href="#ai">Artificial intelligence at TC</a>
+      <a href="#help">Need help?</a>
+      <a href="#connect">Stay connected</a>
+    </nav>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top" aria-labelledby="hero-heading">
+  <div class="container-wide hero-grid">
+    <div class="reveal">
+      <span class="hero-eyebrow"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> A student resource from DFI</span>
+      <h1 id="hero-heading">
+        Learning <span class="highlight">online</span> at<br>Teachers College.
+      </h1>
+      <p class="hero-lede">
+        Whether you're starting your first semester or returning for another, this page brings together everything you need to thrive — from setting up your tech to using AI responsibly — in one place you can come back to anytime.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#get-set-up">
+          Get started <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        <a class="btn btn-secondary" href="#help">
+          <i class="fa-solid fa-life-ring" aria-hidden="true"></i> I need help now
+        </a>
+      </div>
+    </div>
+
+    <aside class="hero-visual reveal" aria-label="Illustration of a graduate student learning online">
+      <figure class="hero-photo">
+        <img
+          src="assets/hero-student-learning.png"
+          alt="A Teachers College graduate student studying online at her laptop, with open notebooks and a coffee mug at a warm wooden desk."
+          width="1600" height="900" loading="eager" decoding="async" />
+        <figcaption class="hero-photo-caption">
+          <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+          Learn anywhere &mdash; with the full support of a TC community behind you.
+        </figcaption>
+      </figure>
+    </aside>
+  </div>
+</section>
+
+<!-- 1. WELCOME -->
+<section id="welcome" aria-labelledby="welcome-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Welcome</span>
+      <h2 id="welcome-heading">Start here, come back anytime.</h2>
+      <p class="section-lede">
+        Teachers College has been a place of educational innovation for more than 135 years. Today, that legacy continues through flexible online and hybrid courses, modern classroom technology, and the thoughtful use of new tools — including artificial intelligence — in service of your learning.
+      </p>
+    </div>
+
+    <div class="welcome-split">
+      <figure class="video-embed reveal">
+        <div class="video-embed-frame">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/v9Z43DOtLK4?si=VS_FgUfKTHyMv6F6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <figcaption class="video-embed-caption">
+          <span class="cap-icon" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+          <span>
+            <strong>Prepare to Lead</strong> &mdash; a short welcome from Teachers College, Columbia University.
+            Can't see the video here? <a href="https://www.youtube.com/watch?v=v9Z43DOtLK4" target="_blank" rel="noopener">Watch on YouTube <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>.
+          </span>
+        </figcaption>
+      </figure>
+
+      <div class="welcome-text reveal">
+        <h3>A message from Teachers College.</h3>
+        <p>For over a century, TC has prepared educators, psychologists, and leaders who shape how the world teaches and learns. Whether you're on campus or studying from across the world, you are part of that tradition.</p>
+        <p>This page is your companion throughout your program &mdash; whenever you need a refresher on a tool, a policy, or a study habit, it will be waiting.</p>
+        <div class="pullquote" style="margin-top: var(--space-5); margin-bottom: 0;">
+          "We're glad you're here. TC is rooted in the belief that learning, at every age and in every form, is the engine of a better world."
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. BEFORE YOU START -->
+<section id="get-set-up" class="section-alt" aria-labelledby="setup-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Step 1</span>
+      <h2 id="setup-heading">Before you start: get set up.</h2>
+      <p class="section-lede">
+        Activate your accounts, gather your equipment, and check a few quick settings so you're ready to log in on day one.
+      </p>
+    </div>
+
+    <div class="tabs reveal" data-tabs>
+      <ul class="tab-list" role="tablist" aria-label="Before you start">
+        <li role="presentation">
+          <button type="button" role="tab" id="tab-accounts" aria-controls="panel-accounts" aria-selected="true" tabindex="0">
+            <i class="fa-solid fa-key" aria-hidden="true"></i> Accounts
+          </button>
+        </li>
+        <li role="presentation">
+          <button type="button" role="tab" id="tab-equipment" aria-controls="panel-equipment" aria-selected="false" tabindex="-1">
+            <i class="fa-solid fa-laptop-code" aria-hidden="true"></i> Equipment
+          </button>
+        </li>
+        <li role="presentation">
+          <button type="button" role="tab" id="tab-access" aria-controls="panel-access" aria-selected="false" tabindex="-1">
+            <i class="fa-solid fa-universal-access" aria-hidden="true"></i> Accessibility
+          </button>
+        </li>
+        <li role="presentation">
+          <button type="button" role="tab" id="tab-readiness" aria-controls="panel-readiness" aria-selected="false" tabindex="-1">
+            <i class="fa-solid fa-list-check" aria-hidden="true"></i> Readiness self-check
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-panels">
+        <!-- TAB 1: ACCOUNTS -->
+        <section role="tabpanel" id="panel-accounts" aria-labelledby="tab-accounts" tabindex="0" class="tab-panel" data-tab="accounts">
+          <div class="tab-split">
+            <div class="tab-split-media">
+              <img src="assets/accounts.png" alt="" loading="lazy">
+            </div>
+            <div class="tab-split-body">
+              <div class="tab-panel-header">
+                <h3>Accounts you'll need</h3>
+              </div>
+              <ul>
+                <li><strong>UNI (your TC login)</strong> &mdash; your unique network ID and single sign-on for nearly every TC system, including <strong>TC Gmail &amp; Google Workspace</strong> (which also unlocks TC's institutional access to Gemini and NotebookLM), <strong>Canvas</strong> (TC's learning management system, where all your courses live), and <strong>Zoom</strong> (used for most live sessions &mdash; access it through Canvas when possible). Activate your UNI after paying your tuition deposit.</li>
+                <li><strong>Student Portal</strong> &mdash; your gateway to registration, records, financials, and program information at <a href="https://student.tc.columbia.edu/" target="_blank" rel="noopener">student.tc.columbia.edu</a>. New to it? Walk through the <a href="https://teacherscollege.screenstepslive.com/a/1817701-navigating-the-new-student-portal" target="_blank" rel="noopener">Navigating the New Student Portal guide</a>.</li>
+              </ul>
+              <div class="callout" style="margin-top: var(--space-5); margin-bottom: 0; border-left: 0;">
+                <h4><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Having trouble with your UNI?</h4>
+                <p style="margin: 0;">If you're having issues <strong>activating your UNI</strong>, <strong>resetting your password</strong>, or anything else account-related, contact <strong>TCIT</strong> &mdash; call <a href="tel:+12126783300">(212) 678-3300, Option 1</a> or email <a href="mailto:servicedesk@tc.columbia.edu">servicedesk@tc.columbia.edu</a>.</p>
+                <p style="margin: var(--space-4) 0 0; text-align: right;"><a class="btn btn-primary" href="https://www.tc.columbia.edu/tcit/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Visit TCIT Website</a></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 2: EQUIPMENT -->
+        <section role="tabpanel" id="panel-equipment" aria-labelledby="tab-equipment" tabindex="0" class="tab-panel" data-tab="equipment" hidden>
+          <div class="tab-split">
+            <div class="tab-split-media">
+              <img src="assets/equipment.png" alt="" loading="lazy">
+            </div>
+            <div class="tab-split-body">
+              <div class="tab-panel-header">
+                <h3>Equipment checklist</h3>
+              </div>
+              <ul>
+                <li>A computer that meets Canvas's basic specs and runs a current browser (Chrome, Firefox, Edge, Safari).</li>
+                <li>Zoom installed and tested at <a href="https://zoom.us/test" target="_blank" rel="noopener">zoom.us/test</a>.</li>
+                <li>Reliable internet &mdash; wired Ethernet if possible, strong Wi-Fi otherwise.</li>
+                <li>A webcam (built-in or external) and a headset with mic for clearer audio.</li>
+                <li>A quiet, well-lit space for live sessions.</li>
+              </ul>
+
+              <div class="mt-6">
+                <details>
+                  <summary>Detailed browser &amp; system specifications</summary>
+                  <div class="details-body">
+                    <p>Canvas supports current and first-previous versions of Chrome, Firefox, Edge, and Safari. For the smoothest experience, keep your browser updated and clear your cache regularly. Minimum recommended specs: 2 GB RAM, broadband connection of at least 512 Kbps, screen resolution of 1024&times;600 or higher. For exact requirements, see the <a href="https://community.canvaslms.com/t5/Canvas-Basics-Guide/What-are-the-basic-computer-specifications-for-Canvas/ta-p/45" target="_blank" rel="noopener">Canvas computer specifications</a>.</p>
+                  </div>
+                </details>
+                <details>
+                  <summary>What if I'm studying from a different time zone?</summary>
+                  <div class="details-body">
+                    <p>TC follows Eastern Time. At the start of each semester, add all your course sessions and deadlines to your calendar in your local time. If a deadline is ambiguous, ask your instructor to confirm. For live sessions, align your schedule in advance &mdash; instructors cannot accommodate every time zone individually.</p>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 3: ACCESSIBILITY -->
+        <section role="tabpanel" id="panel-access" aria-labelledby="tab-access" tabindex="0" class="tab-panel" data-tab="access" hidden>
+          <div class="tab-split">
+            <div class="tab-split-media">
+              <img src="assets/accessibility.png" alt="" loading="lazy">
+            </div>
+            <div class="tab-split-body">
+              <div class="tab-panel-header">
+                <h3>Accessibility &amp; accommodations</h3>
+              </div>
+              <p>If a disability or condition may affect how you participate online &mdash; vision, hearing, cognitive, chronic health &mdash; register with the <strong>Office of Access and Services for Individuals with Disabilities (OASID)</strong> early. They coordinate accommodations like extended time, captioning, and alternative formats.</p>
+              <p style="margin: var(--space-4) 0 0; text-align: right;"><a class="btn btn-primary" href="https://www.tc.columbia.edu/oasid/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Visit OASID Website</a></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 4: READINESS SELF-CHECK -->
+        <section role="tabpanel" id="panel-readiness" aria-labelledby="tab-readiness" tabindex="0" class="tab-panel" data-tab="readiness" hidden>
+          <div class="tab-split">
+            <div class="tab-split-media">
+              <img src="assets/readiness.png" alt="" loading="lazy">
+            </div>
+            <div class="tab-split-body">
+              <div class="tab-panel-header">
+                <h3>A quick online-readiness self-check</h3>
+              </div>
+              <p class="text-muted">Five minutes of reflection can save you weeks of friction. You'll thrive online if you can answer <em>yes</em> to most of these:</p>
+              <ul class="checklist">
+                <li>I have a consistent, reliable internet connection and a quiet place to study.</li>
+                <li>I can set aside at least 8 hours per week per course, spread across multiple days.</li>
+                <li>I'm comfortable asking questions in writing (email, discussion boards, Canvas messages).</li>
+                <li>I can keep track of deadlines without daily in-person reminders.</li>
+                <li>I know who to contact when something isn't working &mdash; technically or academically.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. NAVIGATING -->
+<section id="navigating" aria-labelledby="nav-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Step 2</span>
+      <h2 id="nav-heading">Navigating your courses.</h2>
+      <p class="section-lede">
+        Canvas is home base. Zoom is where you meet. Here's how to make both work for you — plus a few norms that help everyone learn together.
+      </p>
+    </div>
+
+    <div class="card-grid">
+      <article class="card reveal">
+        <span class="icon-circle" aria-hidden="true"><i class="fa-solid fa-chalkboard"></i></span>
+        <h3>Canvas basics</h3>
+        <p>You'll find your syllabus, readings, assignments, grades, and announcements in Canvas. Customize your Dashboard, use the Canvas Inbox for messages, and turn on notifications so you never miss an announcement.</p>
+        <p style="margin-top: var(--space-4); text-align: right;"><a class="btn btn-primary" href="https://www.tc.columbia.edu/digitalfuturesinstitute/learning--technology/instructional-guides--resources/self-paced-learning-guides/canvas-quickstart-guide-for-students/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Canvas QuickStart Guide</a></p>
+      </article>
+
+      <article class="card card-blue reveal">
+        <span class="icon-circle" aria-hidden="true"><i class="fa-solid fa-video"></i></span>
+        <h3>Zoom for live sessions</h3>
+        <p>Most live (synchronous) sessions use Zoom. Access Zoom through Canvas for the smoothest experience, join a few minutes early with a working camera and mic, and use a headset when you can. If you miss a session, watch the recording and complete any follow-up reflection.</p>
+        <p style="margin-top: var(--space-4); text-align: right;"><a class="btn btn-primary" href="https://www.tc.columbia.edu/digitalfuturesinstitute/learning--technology/individual-tool-pages/zoom/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> DFI Zoom Resources</a></p>
+      </article>
+
+    </div>
+
+    <!-- Other teaching & learning tools -->
+    <div class="tool-subsection reveal">
+      <div class="tool-subsection-header">
+        <h3>Other teaching &amp; learning tools</h3>
+        <p>Your instructors may ask you to use one of these platforms alongside Canvas and Zoom. Click a tool for setup steps and tips.</p>
+      </div>
+      <div class="tool-grid">
+        <a class="tool-tile" href="https://www.tc.columbia.edu/digitalfuturesinstitute/learning--technology/individual-tool-pages/padlet/" target="_blank" rel="noopener">
+          <span class="tool-tile-logo"><img src="https://www.google.com/s2/favicons?domain=padlet.com&sz=128" alt="" loading="lazy" width="48" height="48"></span>
+          <span class="tool-tile-name">Padlet <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+          <p>Collaborative online boards for brainstorming, group discussion, and sharing multimedia.</p>
+        </a>
+        <a class="tool-tile" href="https://www.tc.columbia.edu/digitalfuturesinstitute/learning--technology/individual-tool-pages/perusall/" target="_blank" rel="noopener">
+          <span class="tool-tile-logo"><img src="https://www.google.com/s2/favicons?domain=perusall.com&sz=128" alt="" loading="lazy" width="48" height="48"></span>
+          <span class="tool-tile-name">Perusall <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+          <p>Social annotation for readings &mdash; highlight, comment, and discuss texts together.</p>
+        </a>
+        <a class="tool-tile" href="https://www.tc.columbia.edu/digitalfuturesinstitute/learning--technology/individual-tool-pages/turnitin/" target="_blank" rel="noopener">
+          <span class="tool-tile-logo"><img src="https://www.google.com/s2/favicons?domain=turnitin.com&sz=128" alt="" loading="lazy" width="48" height="48"></span>
+          <span class="tool-tile-name">Turnitin <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+          <p>Originality checking and assignment feedback, typically integrated with Canvas.</p>
+        </a>
+        <a class="tool-tile" href="https://www.tc.columbia.edu/digitalfuturesinstitute/learning--technology/individual-tool-pages/screencast-o-matic/" target="_blank" rel="noopener">
+          <span class="tool-tile-logo"><img src="https://www.google.com/s2/favicons?domain=screenpal.com&sz=128" alt="" loading="lazy" width="48" height="48"></span>
+          <span class="tool-tile-name">ScreenPal <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+          <p>Record your screen and webcam for video assignments, walkthroughs, or presentations.</p>
+        </a>
+        <a class="tool-tile" href="https://www.tc.columbia.edu/digitalfuturesinstitute/learning--technology/individual-tool-pages/honorlock/" target="_blank" rel="noopener">
+          <span class="tool-tile-logo"><img src="https://www.google.com/s2/favicons?domain=honorlock.com&sz=128" alt="" loading="lazy" width="48" height="48"></span>
+          <span class="tool-tile-name">Honorlock <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+          <p>Online proctoring for remote exams &mdash; set up your webcam and browser ahead of time.</p>
+        </a>
+        <a class="tool-tile" href="https://www.tc.columbia.edu/digitalfuturesinstitute/learning--technology/individual-tool-pages/mentimeter/" target="_blank" rel="noopener">
+          <span class="tool-tile-logo"><img src="https://www.google.com/s2/favicons?domain=mentimeter.com&sz=128" alt="" loading="lazy" width="48" height="48"></span>
+          <span class="tool-tile-name">Mentimeter <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+          <p>Live polls, word clouds, quizzes, and interactive slides during class sessions.</p>
+        </a>
+      </div>
+      <p style="margin-top: var(--space-6); text-align: right;"><a class="btn btn-primary" href="https://www.tc.columbia.edu/digitalfuturesinstitute/learning--technology/supported-software/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Explore all supported software</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. SUCCEEDING -->
+<section id="succeeding" class="section-alt" aria-labelledby="succeed-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Step 3</span>
+      <h2 id="succeed-heading">Succeeding as an online learner.</h2>
+      <p class="section-lede">
+        Online learning rewards steady effort over last-minute pushes. Treat asynchronous work — discussion boards, recorded lectures, readings — like a standing appointment, not something you'll catch up on later. The students who thrive aren't the most talented; they're the most organized and the most connected.
+      </p>
+    </div>
+
+    <div class="grid-two">
+      <div class="reveal">
+        <h3>Build a weekly rhythm</h3>
+        <ul class="checklist">
+          <li>Block specific times in your calendar for each course — treat them like live classes, synchronous or not.</li>
+          <li>Plan on at least 8 hours per course per week, spread across multiple days.</li>
+          <li>Log in at least three times a week so you don't miss activity.</li>
+          <li>Protect a dedicated study space, even if it's one corner of a table.</li>
+          <li>Take short breaks every 45–60 minutes.</li>
+          <li>Draft assignments in your own tool, then paste into Canvas — and submit a day early when you can, since tech issues happen.</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h3>Stay connected &amp; care for yourself</h3>
+        <ul class="checklist">
+          <li>Introduce yourself in discussion forums early in the semester, and post early each week — you'll get more meaningful replies.</li>
+          <li>Reach out to classmates for study groups — Zoom, Google Meet, or a chat thread.</li>
+          <li>Email instructors or visit office hours freely. You're not bothering them.</li>
+          <li>Graduate study is demanding — reach out early if you're struggling.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-top: var(--space-10);">
+      <h3 style="color: var(--tc-navy); margin: 0 0 var(--space-4); font-size: clamp(1.35rem, 1.1rem + 0.8vw, 1.75rem); letter-spacing: -0.01em;">Know the rules</h3>
+
+      <div class="tabs tabs-gold" data-tabs>
+        <ul class="tab-list" role="tablist" aria-label="Know the rules">
+          <li role="presentation">
+            <button type="button" role="tab" id="tab-integrity" aria-controls="panel-integrity" aria-selected="true" tabindex="0">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Academic integrity
+            </button>
+          </li>
+          <li role="presentation">
+            <button type="button" role="tab" id="tab-privacy" aria-controls="panel-privacy" aria-selected="false" tabindex="-1">
+              <i class="fa-solid fa-user-shield" aria-hidden="true"></i> Privacy &amp; online conduct
+            </button>
+          </li>
+        </ul>
+        <div class="tab-panels">
+          <section role="tabpanel" id="panel-integrity" aria-labelledby="tab-integrity" tabindex="0" class="tab-panel" data-tab="integrity">
+            <div class="tab-panel-header">
+              <h3>Academic integrity</h3>
+            </div>
+            <p>You're expected to uphold the standards in TC's Student Code of Conduct &mdash; which covers plagiarism, collaboration boundaries, assessment conduct, and the growing question of how generative AI may be used in your coursework. Every course and assignment can set its own expectations, so when anything is unclear &mdash; especially around AI use, citations, or group work &mdash; ask your instructor before you submit.</p>
+            <p style="margin: var(--space-4) 0 0; text-align: right;"><a class="btn btn-primary" href="https://www.tc.columbia.edu/student-affairs/our-teams/student-conduct/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Read the Student Code of Conduct</a></p>
+          </section>
+
+          <section role="tabpanel" id="panel-privacy" aria-labelledby="tab-privacy" tabindex="0" class="tab-panel" data-tab="privacy" hidden>
+            <div class="tab-panel-header">
+              <h3>Privacy &amp; online conduct</h3>
+            </div>
+            <p>Online classrooms are still classrooms. Treat Zoom sessions, Canvas discussions, and course materials the same way you would a face-to-face seminar &mdash; with respect for your classmates, your instructor, and the ideas shared in the room.</p>
+            <ul>
+              <li><strong>Don't record, screenshot, or share class sessions</strong> without your instructor's explicit permission &mdash; and, where classmates are visible or audible, without their consent too. This applies to live Zoom sessions, breakout rooms, and private chat messages.</li>
+              <li><strong>Treat course materials as intellectual property.</strong> Slides, recordings, readings, and assignments are shared with you for learning &mdash; not for public posting, social media, or redistribution outside your course.</li>
+              <li><strong>Protect your own data.</strong> Keep your UNI credentials private (never share them, even with classmates), use a strong password, and think carefully about what personal information you post in discussion forums or profiles.</li>
+              <li><strong>Respect your classmates' privacy.</strong> What's shared in class &mdash; stories, opinions, personal experiences &mdash; should stay in class. Don't quote or repost classmates' contributions outside the course without their consent.</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. AI AT TC -->
+<section id="ai" class="ai-section" aria-labelledby="ai-heading">
+  <div class="ai-waves" aria-hidden="true"></div>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">New</span>
+      <h2 id="ai-heading">Artificial intelligence at TC.</h2>
+      <p class="section-lede">
+        TC provides institutional access to AI tools, thoughtful guidelines for their use, and a growing library of resources to help you build AI literacy. Here's how to use them well.
+      </p>
+    </div>
+
+    <div class="callout reveal">
+      <p><strong>AI expectations vary from course to course.</strong> Your syllabus sets the ground rules &mdash; when anything's unclear, ask your instructor.</p>
+    </div>
+
+    <h3 class="mt-8 reveal">Responsible use: five practices</h3>
+    <div class="ai-practices">
+      <div class="ai-practice reveal">
+        <span class="ai-practice-num">01</span>
+        <div>
+          <h4>Ask first.</h4>
+          <p>If your syllabus doesn't mention AI, assume it isn't allowed until you've confirmed with your instructor.</p>
+        </div>
+      </div>
+      <div class="ai-practice reveal">
+        <span class="ai-practice-num">02</span>
+        <div>
+          <h4>Verify everything.</h4>
+          <p>AI tools can produce confident-sounding content that's wrong. Cross-check facts, quotes, and citations against original sources.</p>
+        </div>
+      </div>
+      <div class="ai-practice reveal">
+        <span class="ai-practice-num">03</span>
+        <div>
+          <h4>Protect private data.</h4>
+          <p>Never paste personally identifiable information, student records, or confidential research into a consumer AI tool.</p>
+        </div>
+      </div>
+      <div class="ai-practice reveal">
+        <span class="ai-practice-num">04</span>
+        <div>
+          <h4>Disclose your use.</h4>
+          <p>When AI is allowed, cite the tool, the model, and how you used it. When in doubt — disclose.</p>
+        </div>
+      </div>
+      <div class="ai-practice reveal">
+        <span class="ai-practice-num">05</span>
+        <div>
+          <h4>Enhance learning, don't shortcut it.</h4>
+          <p>The goal of your program is your growth. AI is a tool — not a substitute for thinking.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-guidelines-cta reveal">
+      <p>These guidelines cover best practices, data privacy, and intellectual property. We strongly encourage all students to review them before using any AI tool.</p>
+      <a class="btn btn-primary" href="https://www.tc.columbia.edu/digitalfuturesinstitute/ai-in-education/recommendations-for-generative-ai-use-at-tc/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> View TC Generative AI Guidelines</a>
+    </div>
+
+    <h3 class="mt-8 reveal">TC's institutionally supported AI tools</h3>
+    <div class="tools-row">
+      <div class="tool-card reveal">
+        <h4>
+          <span class="tool-card-logo"><img src="https://www.google.com/s2/favicons?domain=gemini.google.com&amp;sz=128" alt="" width="28" height="28" loading="lazy"></span>
+          Google Gemini
+        </h4>
+        <p>TC's institutional instance of Gemini, with enhanced data privacy. Sign in at <a href="https://gemini.google.com/" target="_blank" rel="noopener">gemini.google.com</a> using your TC Google account.</p>
+        <p class="tool-card-cta">
+          <a class="btn btn-primary" href="https://www.tc.columbia.edu/digitalfuturesinstitute/ai-in-education/gemini-for-students-on-ai-for-education/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Learn more</a>
+        </p>
+      </div>
+      <div class="tool-card reveal">
+        <h4>
+          <span class="tool-card-logo"><img src="assets/notebooklm-logo.png" alt="" width="28" height="28" loading="lazy"></span>
+          NotebookLM
+        </h4>
+        <p>A research-focused AI notebook that grounds answers in sources you upload. Access via your TC Google account for institutional data protections.</p>
+        <p class="tool-card-cta">
+          <a class="btn btn-primary" href="https://www.youtube.com/watch?v=Rz8kfXTWhSg" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Learn more</a>
+        </p>
+      </div>
+    </div>
+
+    <h3 class="mt-8 reveal">Build your AI literacy</h3>
+    <p class="reveal">Drawing on student-focused frameworks from <a href="https://www.unesco.org/en/digital-education/ai-future-learning" target="_blank" rel="noopener">UNESCO</a>, <a href="https://www.educause.edu/content/2024/ai-literacy-in-teaching-and-learning/student-altl" target="_blank" rel="noopener">EDUCAUSE</a>, and <a href="https://www.psu.edu/news/administration/story/penn-state-launches-ai-literacy-framework-advance-university-wide-ai-literacy" target="_blank" rel="noopener">Penn State</a>, aim to grow across four dimensions:</p>
+    <div class="literacy-grid">
+      <div class="literacy-card reveal">
+        <i class="fa-solid fa-heart" aria-hidden="true"></i>
+        <strong>Human-centered mindset</strong>
+        <span>Understand when AI helps, when it hurts, and who's affected by the tools you use.</span>
+      </div>
+      <div class="literacy-card reveal">
+        <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+        <strong>Ethics &amp; responsible use</strong>
+        <span>Bias, fairness, privacy, environmental cost, and academic integrity.</span>
+      </div>
+      <div class="literacy-card reveal">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <strong>Critical evaluation</strong>
+        <span>Verify facts, cross-check citations, and spot confident-sounding errors before you trust them.</span>
+      </div>
+      <div class="literacy-card reveal">
+        <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+        <strong>Technical understanding</strong>
+        <span>How these tools are built, what they can and can't do, and how to prompt and iterate with them effectively.</span>
+      </div>
+    </div>
+
+    <p class="reveal mt-6" style="color: #B8C4DC;">Start with DFI's <strong style="color: #fff;">AI in 30 Minutes</strong> series &mdash; short, beginner-friendly videos covering the fundamentals.</p>
+    <div class="video-playlist reveal" id="aiPlaylist">
+      <div class="video-playlist-main">
+        <div class="video-player">
+          <iframe
+            id="aiPlaylistFrame"
+            src="https://www.youtube.com/embed/iFjDxIJXt2Y?rel=0"
+            title="Getting Started with AI: Basics and Beyond"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"></iframe>
+        </div>
+        <div class="video-caption">
+          <h4 id="aiPlaylistTitle">Getting Started with AI: Basics and Beyond</h4>
+          <p id="aiPlaylistDesc">A 30-minute webinar exploring generative AI fundamentals with examples across text, image, video, and voice tools &mdash; plus benefits, challenges, and ethical considerations.</p>
+          <div class="video-meta">
+            <span id="aiPlaylistMeta">Webinar &bull; June 18, 2024</span>
+            <a id="aiPlaylistExternal" href="https://youtu.be/iFjDxIJXt2Y" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Open on YouTube</a>
+          </div>
+        </div>
+      </div>
+      <div class="video-playlist-list">
+        <div class="video-playlist-list-header">
+          <strong>AI in 30 Minutes</strong>
+          <span>10 videos</span>
+        </div>
+        <ol class="video-playlist-items" id="aiPlaylistItems">
+          <li><button type="button" aria-current="true"
+            data-embed="https://www.youtube.com/embed/iFjDxIJXt2Y?rel=0&amp;autoplay=1"
+            data-external="https://youtu.be/iFjDxIJXt2Y"
+            data-title="Getting Started with AI: Basics and Beyond"
+            data-desc="A 30-minute webinar exploring generative AI fundamentals with examples across text, image, video, and voice tools — plus benefits, challenges, and ethical considerations."
+            data-meta="Webinar &bull; June 18, 2024">
+            <span class="video-playlist-index">01</span>
+            <span class="video-playlist-body">
+              <span class="video-playlist-title">Getting Started with AI: Basics and Beyond</span>
+              <span class="video-playlist-duration">Webinar &bull; 30 min</span>
+            </span>
+          </button></li>
+          <li><button type="button"
+            data-embed="https://tc.yuja.com/V/Video?v=12714871&amp;node=55418830&amp;a=18534193"
+            data-external="https://tc.yuja.com/V/Video?v=12714871&amp;node=55418830&amp;a=18534193"
+            data-title="AI Image Generators for Beginners"
+            data-desc="A 30-minute webinar on using AI image generators for projects and teaching. Covers tool functionality, ethical use, and creative applications &mdash; no artistic skills required."
+            data-meta="Webinar &bull; February 27, 2025">
+            <span class="video-playlist-index">02</span>
+            <span class="video-playlist-body">
+              <span class="video-playlist-title">AI Image Generators for Beginners</span>
+              <span class="video-playlist-duration">Webinar &bull; 30 min</span>
+            </span>
+          </button></li>
+          <li><button type="button"
+            data-embed="https://www.youtube.com/embed/rT7XDhddIpo?rel=0&amp;autoplay=1"
+            data-external="https://youtu.be/rT7XDhddIpo"
+            data-title="Prompting for Beginners"
+            data-desc="A 30-minute beginner webinar on crafting effective AI prompts. Covers key concepts, best practices, and real-world examples to get more accurate and creative outputs."
+            data-meta="Webinar &bull; April 16, 2025">
+            <span class="video-playlist-index">03</span>
+            <span class="video-playlist-body">
+              <span class="video-playlist-title">Prompting for Beginners</span>
+              <span class="video-playlist-duration">Webinar &bull; 30 min</span>
+            </span>
+          </button></li>
+          <li><button type="button"
+            data-embed="https://www.youtube.com/embed/3RmqZuSip7c?rel=0&amp;autoplay=1"
+            data-external="https://www.youtube.com/watch?v=3RmqZuSip7c"
+            data-title="AI-Generated Zoom Meeting Summaries"
+            data-desc="A 30-minute webinar introducing AI meeting assistants that record, transcribe, and summarize Zoom sessions &mdash; plus the privacy, legal, and policy considerations to manage responsibly."
+            data-meta="Webinar &bull; March 13, 2025">
+            <span class="video-playlist-index">04</span>
+            <span class="video-playlist-body">
+              <span class="video-playlist-title">AI-Generated Zoom Meeting Summaries</span>
+              <span class="video-playlist-duration">Webinar &bull; 30 min</span>
+            </span>
+          </button></li>
+          <li><button type="button"
+            data-embed="https://www.youtube.com/embed/Rz8kfXTWhSg?rel=0&amp;autoplay=1"
+            data-external="https://www.youtube.com/watch?v=Rz8kfXTWhSg"
+            data-title="Getting Started with NotebookLM"
+            data-desc="A 4-minute demo of NotebookLM &mdash; upload PDFs, websites, YouTube videos, audio, Google Docs, or Slides and have them summarized, connected, turned into a podcast, or ready to answer your questions."
+            data-meta="Tutorial &bull; 4 min">
+            <span class="video-playlist-index">05</span>
+            <span class="video-playlist-body">
+              <span class="video-playlist-title">Getting Started with NotebookLM</span>
+              <span class="video-playlist-duration">Tutorial &bull; 4 min</span>
+            </span>
+          </button></li>
+          <li><button type="button"
+            data-embed="https://www.youtube.com/embed/kvSGDyYXmEQ?rel=0&amp;autoplay=1"
+            data-external="https://www.youtube.com/watch?v=kvSGDyYXmEQ"
+            data-title="Prompts for Generative AI Text Tools"
+            data-desc="A 2-minute demo showing two simple, effective prompts to get you started with ChatGPT, Gemini, or Claude &mdash; from a blank prompt box to a useful response in seconds."
+            data-meta="Tutorial &bull; 2 min">
+            <span class="video-playlist-index">06</span>
+            <span class="video-playlist-body">
+              <span class="video-playlist-title">Prompts for Generative AI Text Tools</span>
+              <span class="video-playlist-duration">Tutorial &bull; 2 min</span>
+            </span>
+          </button></li>
+          <li><button type="button"
+            data-embed="https://www.youtube.com/embed/-T0Wik0qZXg?rel=0&amp;autoplay=1"
+            data-external="https://www.youtube.com/watch?v=-T0Wik0qZXg"
+            data-title="Create an AI Video Avatar"
+            data-desc="In under 2 minutes, see how a realistic video avatar for presentations was made using readily available software and hardware."
+            data-meta="Tutorial &bull; 2 min">
+            <span class="video-playlist-index">07</span>
+            <span class="video-playlist-body">
+              <span class="video-playlist-title">Create an AI Video Avatar</span>
+              <span class="video-playlist-duration">Tutorial &bull; 2 min</span>
+            </span>
+          </button></li>
+          <li><button type="button"
+            data-embed="https://www.youtube.com/embed/FJGHb4o17gc?rel=0&amp;autoplay=1"
+            data-external="https://www.youtube.com/watch?v=FJGHb4o17gc"
+            data-title="AI Essentials for Grad Students: Practical Tips"
+            data-desc="Practical tips for using generative AI in your graduate studies responsibly &mdash; without compromising academic integrity."
+            data-meta="Grad Series &bull; Short">
+            <span class="video-playlist-index">08</span>
+            <span class="video-playlist-body">
+              <span class="video-playlist-title">AI Essentials for Grad Students: Practical Tips</span>
+              <span class="video-playlist-duration">Grad Series &bull; Short</span>
+            </span>
+          </button></li>
+          <li><button type="button"
+            data-embed="https://www.youtube.com/embed/FYNCvtbtc2k?rel=0&amp;autoplay=1"
+            data-external="https://www.youtube.com/watch?v=FYNCvtbtc2k"
+            data-title="AI Essentials for Grad Students: What is AI?"
+            data-desc="A foundational look at what AI is and how the new generation of generative AI tools like ChatGPT actually work &mdash; tailored for graduate students."
+            data-meta="Grad Series &bull; Short">
+            <span class="video-playlist-index">09</span>
+            <span class="video-playlist-body">
+              <span class="video-playlist-title">AI Essentials for Grad Students: What is AI?</span>
+              <span class="video-playlist-duration">Grad Series &bull; Short</span>
+            </span>
+          </button></li>
+          <li><button type="button"
+            data-embed="https://www.youtube.com/embed/HR47-V2MG1c?rel=0&amp;autoplay=1"
+            data-external="https://www.youtube.com/watch?v=HR47-V2MG1c"
+            data-title="AI Essentials for Grad Students: Benefits and Challenges"
+            data-desc="A candid assessment of AI's strengths for productivity and learning alongside the significant challenges of inaccuracy, data privacy, and ethical considerations."
+            data-meta="Grad Series &bull; Short">
+            <span class="video-playlist-index">10</span>
+            <span class="video-playlist-body">
+              <span class="video-playlist-title">AI Essentials for Grad Students: Benefits and Challenges</span>
+              <span class="video-playlist-duration">Grad Series &bull; Short</span>
+            </span>
+          </button></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="disclaimer-grid reveal">
+      <div>
+        <h4>Disclaimer</h4>
+        <p>Some applications used in your courses, beyond TC's institutionally supported AI tools (Google Gemini and NotebookLM), may not be vetted or endorsed by Teachers College. TC does not assume responsibility for the accessibility, privacy, or security of third-party applications. Use of these applications is at the sole discretion of the user, and TC disclaims any legal liability associated with their use.</p>
+      </div>
+      <div>
+        <h4>Disclosure</h4>
+        <p>Some images and text on this page and in TC courses may have been generated or aided by AI tools. These materials support learning and demonstrate educational applications of AI. Questions about how AI was used in a specific course? Contact your instructor. Questions about this page? <a href="https://tc.service-now.com/home?id=sc_cat_item&amp;sys_id=f94c89791b2ae010ad5432a3cc4bcb90" target="_blank" rel="noopener">Contact DFI</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. HELP -->
+<section id="help" aria-labelledby="help-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Support</span>
+      <h2 id="help-heading">Need help? Start here.</h2>
+      <p class="section-lede">
+        If you hit a wall, reach out — the sooner, the better. Use the directory below to find the right contact.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <article class="contact-card reveal">
+        <span class="contact-icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
+        <h3>Help with Canvas</h3>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <span><a href="tel:+18449060594">+1 (844) 906-0594</a> &mdash; 24/7 hotline</span></li>
+          <li><i class="fa-solid fa-comments" aria-hidden="true"></i> <a href="https://community.canvaslms.com/t5/Canvas/ct-p/canvas" target="_blank" rel="noopener">Live chat with Canvas Support</a></li>
+          <li><i class="fa-solid fa-book" aria-hidden="true"></i> <a href="https://community.canvaslms.com/t5/Student-Guide/tkb-p/student" target="_blank" rel="noopener">Canvas Student Guide</a></li>
+        </ul>
+      </article>
+
+      <article class="contact-card variant-blue reveal">
+        <span class="contact-icon" aria-hidden="true"><i class="fa-solid fa-video"></i></span>
+        <h3>Help with Zoom</h3>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-ticket" aria-hidden="true"></i> <a href="https://www.tc.columbia.edu/tcit/" target="_blank" rel="noopener">Submit a Zoom ticket (TCIT)</a></li>
+          <li><i class="fa-solid fa-circle-play" aria-hidden="true"></i> <a href="https://www.tc.columbia.edu/digitalfuturesinstitute/learning--technology/individual-tool-pages/zoom/" target="_blank" rel="noopener">Zoom tutorials (DFI)</a></li>
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <span><a href="tel:+12126783300">+1 (212) 678-3300</a>, Option 1</span></li>
+        </ul>
+      </article>
+
+      <article class="contact-card variant-green reveal">
+        <span class="contact-icon" aria-hidden="true"><i class="fa-solid fa-headset"></i></span>
+        <h3>Help from TCIT</h3>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-globe" aria-hidden="true"></i> <a href="https://www.tc.columbia.edu/tcit/" target="_blank" rel="noopener">tc.columbia.edu/tcit</a></li>
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+12126783300">+1 (212) 678-3300</a></li>
+          <li><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:servicedesk@tc.columbia.edu">servicedesk@tc.columbia.edu</a></li>
+        </ul>
+      </article>
+
+      <article class="contact-card variant-gold reveal">
+        <span class="contact-icon" aria-hidden="true"><i class="fa-solid fa-universal-access"></i></span>
+        <h3>Help from OASID</h3>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-globe" aria-hidden="true"></i> <a href="https://www.tc.columbia.edu/oasid/" target="_blank" rel="noopener">tc.columbia.edu/oasid</a></li>
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+12126783689">+1 (212) 678-3689</a></li>
+          <li><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:oasid@tc.columbia.edu">oasid@tc.columbia.edu</a></li>
+        </ul>
+      </article>
+    </div>
+
+    <details class="details-collapsible reveal">
+      <summary>
+        <span class="summary-title">"Who do I contact for what?"</span>
+      </summary>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">If your issue is about…</th>
+              <th scope="col">Contact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Canvas (can't log in, assignment not loading, gradebook)</td><td>Canvas Support Hotline or Live Chat (24/7)</td></tr>
+            <tr><td>Zoom (join link, audio/video, recording access)</td><td>TCIT Service Desk or DFI Zoom resources</td></tr>
+            <tr><td>TC accounts, UNI activation, password reset, Student Portal, Wi-Fi, computing</td><td>TCIT Service Desk</td></tr>
+            <tr><td>Accessibility accommodations</td><td>OASID</td></tr>
+            <tr><td>Writing, research, or academic skills</td><td>Graduate Writing Center</td></tr>
+            <tr><td>Library databases, research, course reserves</td><td>Gottesman Libraries</td></tr>
+            <tr><td>Advising, wellbeing, life at TC</td><td>Student Affairs / Student Support &amp; Advocacy</td></tr>
+            <tr><td>AI tools or content on this page</td><td><a href="https://tc.service-now.com/home?id=sc_cat_item&amp;sys_id=f94c89791b2ae010ad5432a3cc4bcb90" target="_blank" rel="noopener">Contact DFI</a> or email <a href="mailto:dfi@tc.columbia.edu">dfi@tc.columbia.edu</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- 7. CONNECT / CLOSING -->
+<section id="connect" class="section-alt">
+  <div class="container closing reveal">
+    <p>Best wishes for a learning experience we hope will inspire you to aspire to make the world a better place.</p>
+  </div>
+</section>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="container-wide">
+    <div class="footer-main">
+      <div>
+        <h4>Digital Futures Institute</h4>
+        <p>A one-stop student resource from DFI at Teachers College, Columbia University.</p>
+        <div class="footer-dfi-contact">
+          Teachers College, Columbia University<br>
+          5th floor, Russell Hall<br>
+          525 West 120th Street<br>
+          New York, NY 10027<br>
+          Phone: <a href="tel:+12126787497">(212) 678-7497</a><br>
+          Email: <a href="mailto:dfi@tc.columbia.edu">dfi@tc.columbia.edu</a>
+        </div>
+        <div class="footer-social" aria-label="Follow DFI on social media">
+          <a href="https://www.linkedin.com/company/digital-futures-institute" target="_blank" rel="noopener" aria-label="DFI on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://www.youtube.com/user/teacherscollege" target="_blank" rel="noopener" aria-label="TC on YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          <a href="https://www.tc.columbia.edu/digitalfuturesinstitute/" target="_blank" rel="noopener" aria-label="DFI website"><i class="fa-solid fa-globe" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>DFI sites</h4>
+        <ul>
+          <li><a href="https://www.tc.columbia.edu/digitalfuturesinstitute/" target="_blank" rel="noopener">DFI Home</a></li>
+          <li><a href="https://www.tc.columbia.edu/digitalfuturesinstitute/ai-in-education/" target="_blank" rel="noopener">AI in Education</a></li>
+          <li><a href="https://www.tc.columbia.edu/digitalfuturesinstitute/learning--technology/" target="_blank" rel="noopener">Learning &amp; Technology</a></li>
+          <li><a href="https://www.tc.columbia.edu/digitalfuturesinstitute/media/" target="_blank" rel="noopener">Media</a></li>
+          <li><a href="https://www.tc.columbia.edu/digitalfuturesinstitute/research/" target="_blank" rel="noopener">Research</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Student support</h4>
+        <ul>
+          <li><a href="https://www.tc.columbia.edu/tcit/" target="_blank" rel="noopener">TCIT Service Desk</a></li>
+          <li><a href="https://www.tc.columbia.edu/oasid/" target="_blank" rel="noopener">OASID</a></li>
+          <li><a href="https://www.tc.columbia.edu/graduate-writing-center/" target="_blank" rel="noopener">Graduate Writing Center</a></li>
+          <li><a href="https://www.tc.columbia.edu/library/" target="_blank" rel="noopener">Gottesman Libraries</a></li>
+          <li><a href="https://www.tc.columbia.edu/studentsupportadvocacy/" target="_blank" rel="noopener">Student Support &amp; Advocacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Policies</h4>
+        <ul>
+          <li><a href="https://www.tc.columbia.edu/digitalfuturesinstitute/ai-in-education/artificial-intelligence-in-education/tc-guidance/" target="_blank" rel="noopener">TC AI Guidance</a></li>
+          <li><a href="https://provost.columbia.edu/content/office-senior-vice-provost/ai-policy" target="_blank" rel="noopener">Columbia Gen AI Policy</a></li>
+          <li><a href="https://www.tc.columbia.edu/student-handbook/" target="_blank" rel="noopener">TC Student Handbook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Teachers College, Columbia University · Digital Futures Institute</span>
+      <span>Last updated: April 17, 2026 · Draft prototype v2</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  const navToggle = document.querySelector('.nav-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+  navToggle.addEventListener('click', () => {
+    const open = mobileNav.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    navToggle.innerHTML = open
+      ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
+      : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+  });
+  mobileNav.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+      mobileNav.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+    }
+  });
+
+  // Scroll-reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+  reveals.forEach((el) => io.observe(el));
+
+  // Tabs — accessible pattern (ARIA tabs, arrow-key nav, roving tabindex)
+  document.querySelectorAll('[data-tabs]').forEach((tabs) => {
+    const tabButtons = Array.from(tabs.querySelectorAll('[role="tab"]'));
+    const panels = tabButtons.map((btn) => document.getElementById(btn.getAttribute('aria-controls')));
+
+    const activate = (idx, focus) => {
+      tabButtons.forEach((btn, i) => {
+        const selected = i === idx;
+        btn.setAttribute('aria-selected', selected ? 'true' : 'false');
+        btn.setAttribute('tabindex', selected ? '0' : '-1');
+        if (panels[i]) panels[i].hidden = !selected;
+      });
+      if (focus) tabButtons[idx].focus();
+    };
+
+    tabButtons.forEach((btn, idx) => {
+      btn.addEventListener('click', () => activate(idx, false));
+      btn.addEventListener('keydown', (e) => {
+        const last = tabButtons.length - 1;
+        let next = null;
+        switch (e.key) {
+          case 'ArrowRight': next = idx === last ? 0 : idx + 1; break;
+          case 'ArrowLeft':  next = idx === 0 ? last : idx - 1; break;
+          case 'Home':       next = 0; break;
+          case 'End':        next = last; break;
+          default: return;
+        }
+        e.preventDefault();
+        activate(next, true);
+      });
+    });
+  });
+
+  // Active section highlight
+  const sectionIds = ['welcome','get-set-up','navigating','succeeding','ai','help'];
+  const navLinks = document.querySelectorAll('.section-nav a');
+  const setActive = (id) => {
+    navLinks.forEach((a) => {
+      a.classList.toggle('is-active', a.getAttribute('href') === '#' + id);
+    });
+  };
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) setActive(entry.target.id);
+    });
+  }, { threshold: 0.35 });
+  sectionIds.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) sectionObserver.observe(el);
+  });
+
+  // AI Playlist: swap iframe on item click
+  (function() {
+    const playlist = document.getElementById('aiPlaylist');
+    if (!playlist) return;
+    const frame = document.getElementById('aiPlaylistFrame');
+    const titleEl = document.getElementById('aiPlaylistTitle');
+    const descEl = document.getElementById('aiPlaylistDesc');
+    const metaEl = document.getElementById('aiPlaylistMeta');
+    const extEl = document.getElementById('aiPlaylistExternal');
+    const items = playlist.querySelectorAll('#aiPlaylistItems button');
+    items.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const embed = btn.dataset.embed;
+        const external = btn.dataset.external;
+        const title = btn.dataset.title;
+        const desc = btn.dataset.desc;
+        const meta = btn.dataset.meta;
+        if (frame && embed) {
+          frame.setAttribute('src', embed);
+          frame.setAttribute('title', title || '');
+        }
+        if (titleEl && title) titleEl.textContent = title;
+        if (descEl && desc) descEl.innerHTML = desc;
+        if (metaEl && meta) metaEl.innerHTML = meta;
+        if (extEl && external) {
+          extEl.setAttribute('href', external);
+          // Show "Open on YouTube" for YouTube links, else generic
+          const isYT = external.includes('youtube.com') || external.includes('youtu.be');
+          extEl.innerHTML = '<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> ' + (isYT ? 'Open on YouTube' : 'Open on Yuja');
+        }
+        items.forEach((b) => b.removeAttribute('aria-current'));
+        btn.setAttribute('aria-current', 'true');
+      });
+    });
+  })();
+</script>
+
+<!-- Animated waves background for AI section -->
+<script type="module">
+  // Respect reduced motion
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const container = document.querySelector('.ai-waves');
+  if (container && !reducedMotion) {
+    try {
+      const { createNoise2D } = await import('https://cdn.jsdelivr.net/npm/simplex-noise@4.0.3/+esm');
+      const SVG_NS = 'http://www.w3.org/2000/svg';
+      const svg = document.createElementNS(SVG_NS, 'svg');
+      svg.setAttribute('preserveAspectRatio', 'none');
+      svg.setAttribute('xmlns', SVG_NS);
+      container.appendChild(svg);
+
+      const config = {
+        lineColor: '#66CEF6',
+        waveSpeedX: 0.006,
+        waveSpeedY: 0.003,
+        waveAmpX: 40,        // big amplitude → strong wavy curves
+        waveAmpY: 20,
+        xGap: 12,            // denser vertical lines
+        yGap: 32,
+        friction: 0.92,
+        tension: 0.004,
+        maxCursorMove: 80,
+      };
+
+      const noise = createNoise2D();
+
+      let bounding = { width: 0, height: 0, left: 0, top: 0 };
+      let lines = [];
+      const mouse = {
+        x: -10, y: 0, lx: 0, ly: 0,
+        sx: 0, sy: 0, v: 0, vs: 0, a: 0, set: false,
+      };
+      let rafId = null;
+      let isVisible = true;
+
+      function setSize() {
+        const rect = container.getBoundingClientRect();
+        bounding = { width: rect.width, height: rect.height, left: rect.left, top: rect.top };
+        svg.setAttribute('viewBox', `0 0 ${rect.width} ${rect.height}`);
+        svg.style.width = rect.width + 'px';
+        svg.style.height = rect.height + 'px';
+      }
+
+      function setLines() {
+        const { width, height } = bounding;
+        lines = [];
+        // Clear existing paths
+        while (svg.firstChild) svg.removeChild(svg.firstChild);
+        const oWidth = width + 200;
+        const oHeight = height + 30;
+        const totalLines = Math.ceil(oWidth / config.xGap);
+        const totalPoints = Math.ceil(oHeight / config.yGap);
+        const xStart = (width - config.xGap * totalLines) / 2;
+        const yStart = (height - config.yGap * totalPoints) / 2;
+        for (let i = 0; i <= totalLines; i++) {
+          const pts = [];
+          for (let j = 0; j <= totalPoints; j++) {
+            pts.push({
+              x: xStart + config.xGap * i,
+              y: yStart + config.yGap * j,
+              wave: { x: 0, y: 0 },
+              cursor: { x: 0, y: 0, vx: 0, vy: 0 },
+            });
+          }
+          const path = document.createElementNS(SVG_NS, 'path');
+          path.setAttribute('fill', 'none');
+          path.setAttribute('stroke', config.lineColor);
+          path.setAttribute('stroke-width', '0.5');
+          path.setAttribute('stroke-opacity', '0.35');
+          svg.appendChild(path);
+          lines.push({ points: pts, path });
+        }
+      }
+
+      function movePoints(time) {
+        const influence = Math.max(200, mouse.vs * 2);
+        lines.forEach((line) => {
+          line.points.forEach((p) => {
+            // Subtle noise-driven idle motion
+            const n = noise(
+              (p.x + time * config.waveSpeedX) * 0.002,
+              (p.y + time * config.waveSpeedY) * 0.0015
+            ) * 12;
+            p.wave.x = Math.cos(n) * config.waveAmpX;
+            p.wave.y = Math.sin(n) * config.waveAmpY;
+
+            const dx = p.x - mouse.sx;
+            const dy = p.y - mouse.sy;
+            const dist = Math.hypot(dx, dy);
+            if (dist < influence) {
+              const s = 1 - dist / influence;
+              const f = s * s; // smooth falloff
+              p.cursor.vx += Math.cos(mouse.a) * f * mouse.vs * 0.008;
+              p.cursor.vy += Math.sin(mouse.a) * f * mouse.vs * 0.008;
+            }
+            p.cursor.vx += (0 - p.cursor.x) * config.tension;
+            p.cursor.vy += (0 - p.cursor.y) * config.tension;
+            p.cursor.vx *= config.friction;
+            p.cursor.vy *= config.friction;
+            p.cursor.x += p.cursor.vx * 2;
+            p.cursor.y += p.cursor.vy * 2;
+            p.cursor.x = Math.min(config.maxCursorMove, Math.max(-config.maxCursorMove, p.cursor.x));
+            p.cursor.y = Math.min(config.maxCursorMove, Math.max(-config.maxCursorMove, p.cursor.y));
+          });
+        });
+      }
+
+      function moved(point) {
+        return {
+          x: point.x + point.wave.x + point.cursor.x,
+          y: point.y + point.wave.y + point.cursor.y,
+        };
+      }
+
+      function drawLines() {
+        lines.forEach((line) => {
+          let d = '';
+          line.points.forEach((p, idx) => {
+            const pos = idx === 0 ? { x: p.x, y: p.y } : moved(p);
+            if (idx === 0) {
+              d = `M ${pos.x} ${pos.y}`;
+            } else if (idx < line.points.length - 1) {
+              const next = moved(line.points[idx + 1] || p);
+              const xc = (pos.x + next.x) / 2;
+              const yc = (pos.y + next.y) / 2;
+              d += ` Q ${pos.x} ${pos.y} ${xc} ${yc}`;
+            } else {
+              d += ` L ${pos.x} ${pos.y}`;
+            }
+          });
+          line.path.setAttribute('d', d);
+        });
+      }
+
+      function tick(t) {
+        if (!isVisible) { rafId = requestAnimationFrame(tick); return; }
+        mouse.sx += (mouse.x - mouse.sx) * 0.1;
+        mouse.sy += (mouse.y - mouse.sy) * 0.1;
+        const dx = mouse.x - mouse.lx;
+        const dy = mouse.y - mouse.ly;
+        const d = Math.hypot(dx, dy);
+        mouse.v = d;
+        mouse.vs += (d - mouse.vs) * 0.1;
+        mouse.vs = Math.min(100, mouse.vs);
+        mouse.lx = mouse.x;
+        mouse.ly = mouse.y;
+        mouse.a = Math.atan2(dy, dx);
+
+        movePoints(t);
+        drawLines();
+        rafId = requestAnimationFrame(tick);
+      }
+
+      function onResize() {
+        setSize();
+        setLines();
+      }
+
+      function updateMouse(clientX, clientY) {
+        // Recompute fresh — bounding changes as the page scrolls/resizes.
+        const rect = container.getBoundingClientRect();
+        mouse.x = clientX - rect.left;
+        mouse.y = clientY - rect.top;
+        if (!mouse.set) {
+          mouse.sx = mouse.x; mouse.sy = mouse.y;
+          mouse.lx = mouse.x; mouse.ly = mouse.y;
+          mouse.set = true;
+        }
+      }
+
+      function onMouseMove(e) {
+        updateMouse(e.clientX, e.clientY);
+      }
+
+      function onTouchMove(e) {
+        const t = e.touches[0];
+        if (!t) return;
+        updateMouse(t.clientX, t.clientY);
+      }
+
+      setSize();
+      setLines();
+      window.addEventListener('resize', onResize);
+      window.addEventListener('mousemove', onMouseMove);
+      window.addEventListener('touchmove', onTouchMove, { passive: true });
+
+      // Pause animation when AI section is off-screen
+      const aiSection = document.getElementById('ai');
+      if (aiSection && 'IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => { isVisible = entry.isIntersecting; });
+        }, { threshold: 0 });
+        io.observe(aiSection);
+      }
+
+      rafId = requestAnimationFrame(tick);
+    } catch (err) {
+      console.warn('Waves animation failed to load:', err);
+    }
+  }
+</script>
+</body>
+</html>
